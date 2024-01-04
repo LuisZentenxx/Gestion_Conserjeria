@@ -2,6 +2,7 @@ package com.example.conserjera;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +25,7 @@ public class GestionVisitasActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
+    private MaterialButton btnAbrirCamara;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,8 +46,7 @@ public class GestionVisitasActivity extends AppCompatActivity {
         TextInputLayout motivoLayout = findViewById(R.id.motivoLayout);
         TextInputEditText txtMotivo = motivoLayout.findViewById(R.id.txtMotivo);
 
-        Button btnScanQR = findViewById(R.id.btnScanQR);
-        btnScanQR.setOnClickListener(view -> iniciarEscaneoQR());
+        btnAbrirCamara = findViewById(R.id.btnScanQR);
 
         Button btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -78,11 +80,25 @@ public class GestionVisitasActivity extends AppCompatActivity {
                 txtMotivo.getText().clear();
             }
         });
+
+        btnAbrirCamara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirCamara();
+            }
+        });
     }
 
-    // Método para iniciar el escaneo QR
-    private void iniciarEscaneoQR() {
-        // Agrega aquí la lógica para escanear QR si es necesario
-    }
+    private void abrirCamara() {
+        // Crear un intent para abrir la aplicación de la cámara
+        Intent intentCamara = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
 
+        // Verificar si hay una aplicación de cámara disponible para manejar el intent
+        if (intentCamara.resolveActivity(getPackageManager()) != null) {
+            // Iniciar la actividad de la cámara
+            startActivity(intentCamara);
+        } else {
+            Toast.makeText(this, "No hay aplicación de cámara disponible", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

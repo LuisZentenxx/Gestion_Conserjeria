@@ -83,6 +83,7 @@ public class EncomiendaActivity extends AppCompatActivity {
                 txtFecha.getText().clear();
 
                 startActivity(intent);
+                finish();
 
             }
         });
