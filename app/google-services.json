@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386425271818",
+    "project_id": "conserjeria-eb29b",
+    "storage_bucket": "conserjeria-eb29b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386425271818:android:13264a12dff36a9f7e11f3",
+        "android_client_info": {
+          "package_name": "com.example.conserjera"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5MUOwYTFIIwct8lurkrPXy_uEQiB-56U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

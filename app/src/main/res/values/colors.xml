@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_50">#f6fcfe</color>
+    <color name="primary_100">#e9f8fb</color>
+    <color name="primary_200">#d3f2f8</color>
+    <color name="primary_300">#b0e7f2</color>
+    <color name="primary_400">#61cfe5</color>
+    <color name="primary_500">#21aeca</color>
+    <color name="primary_600">#187d91</color>
+    <color name="primary_700">#115b69</color>
+    <color name="primary_800">#0a353d</color>
+    <color name="primary_900">#051a1f</color>
+    <color name="primary_950">#030f12</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary_50">#f8fcfc</color>
+    <color name="secondary_100">#edf8f7</color>
+    <color name="secondary_200">#dbf0ef</color>
+    <color name="secondary_300">#bee4e2</color>
+    <color name="secondary_400">#7dcac6</color>
+    <color name="secondary_500">#44a7a2</color>
+    <color name="secondary_600">#317774</color>
+    <color name="secondary_700">#235754</color>
+    <color name="secondary_800">#153331</color>
+    <color name="secondary_900">#0a1919</color>
+    <color name="secondary_950">#060e0e</color>
+
+    <!-- Tertiary Colors -->
+    <color name="tertiary_50">#fbfbf8</color>
+    <color name="tertiary_100">#f5f6ee</color>
+    <color name="tertiary_200">#ebedde</color>
+    <color name="tertiary_300">#dbdfc3</color>
+    <color name="tertiary_400">#b6c087</color>
+    <color name="tertiary_500">#8e9a51</color>
+    <color name="tertiary_600">#666e3a</color>
+    <color name="tertiary_700">#4a502a</color>
+    <color name="tertiary_800">#2b2f19</color>
+    <color name="tertiary_900">#16170c</color>
+    <color name="tertiary_950">#0c0d07</color>
+
+    <!-- Quaternary Colors -->
+    <color name="quaternary_50">#fef9f5</color>
+    <color name="quaternary_100">#fef1e7</color>
+    <color name="quaternary_200">#fce2cf</color>
+    <color name="quaternary_300">#facca8</color>
+    <color name="quaternary_400">#f59851</color>
+    <color name="quaternary_500">#de670d</color>
+    <color name="quaternary_600">#9f4a09</color>
+    <color name="quaternary_700">#743607</color>
+    <color name="quaternary_800">#431f04</color>
+    <color name="quaternary_900">#221002</color>
+    <color name="quaternary_950">#130901</color>
+
+    <!-- Quinary Colors -->
+    <color name="quinary_50">#fff9f5</color>
+    <color name="quinary_100">#fff0e5</color>
+    <color name="quinary_200">#ffe1cc</color>
+    <color name="quinary_300">#ffc9a3</color>
+    <color name="quinary_400">#ff9447</color>
+    <color name="quinary_500">#eb6200</color>
+    <color name="quinary_600">#a84600</color>
+    <color name="quinary_700">#7a3300</color>
+    <color name="quinary_800">#471e00</color>
+    <color name="quinary_900">#240f00</color>
+    <color name="quinary_950">#140900</color>
+</resources>

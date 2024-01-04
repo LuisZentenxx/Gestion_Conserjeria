@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_50"
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
+
+    <!-- Texto "Crear Cuenta en CodeBoost" en la parte superior -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registro de Usuario"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/secondary_900"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/office"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de Usuario"
+            android:fontFamily="@font/regular"
+            android:lines="1"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Correo Electrónico -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:fontFamily="@font/regular"
+            android:hint="Correo Electrónico"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPassw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:helperText="Requerido"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:hint="Contraseña"
+            android:fontFamily="@font/regular"
+            android:inputType="textPassword"
+            android:maxLength="16" /> <!-- Opcional: Limita la longitud máxima de la contraseña -->
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Campo de Repetir Contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtConfirmPassw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:passwordToggleEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassw"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passw2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar Contraseña"
+            android:fontFamily="@font/regular"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="16"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Botón de Registro -->
+
+    <RadioGroup
+        android:id="@+id/radioGroupRoles"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtConfirmPassw">
+
+        <RadioButton
+            android:id="@+id/radioButtonAdmin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Admin"
+            android:fontFamily="@font/bold"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButtonConserje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Conserje"
+            android:fontFamily="@font/bold"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButtonResidente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Residente"
+            android:fontFamily="@font/bold"
+            />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Registrarse"
+        android:fontFamily="@font/bold"
+        android:textSize="18sp"
+        android:backgroundTint="@color/quaternary_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtConfirmPassw"
+        app:layout_constraintVertical_bias="0.66" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

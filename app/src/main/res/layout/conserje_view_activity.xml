@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@color/secondary_50"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConserjeViewActivity">
+
+    <TextView
+        android:id="@+id/appLogoImageView"
+        android:layout_width="354dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/bold"
+        android:text="Panel Conserje"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_900"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/guard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogoImageView"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/GestionBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/quaternary_500"
+        android:fontFamily="@font/bold"
+        android:text="Gestión de Visitas"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ControlBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ControlBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/quaternary_500"
+        android:fontFamily="@font/bold"
+        android:text="Control de Vehículos"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/SearchBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/quaternary_500"
+        android:fontFamily="@font/bold"
+        android:text="Panel de Búsqueda"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo"
+        app:layout_constraintVertical_bias="0.605" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/EncomiendaBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="@color/quaternary_500"
+        android:fontFamily="@font/bold"
+        android:text="Encomiendas"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SearchBtn"
+        app:layout_constraintVertical_bias="0.135" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
