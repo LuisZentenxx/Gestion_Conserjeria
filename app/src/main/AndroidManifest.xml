@@ -35,6 +35,11 @@
         <activity android:name=".ReservaActivity"/>
         <activity android:name=".MiPerfil"/>
         <activity android:name=".PatenteActivity"/>
+        <activity android:name=".BusquedaActivity"/>
+        <activity android:name=".BusquedaResidenteActivity"/>
+        <activity android:name=".BusquedaVehiculoActivity"/>
+        <activity android:name=".BusquedaVisitaActivity"/>
+
 
 
 

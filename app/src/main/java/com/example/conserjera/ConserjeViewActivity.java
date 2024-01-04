@@ -40,7 +40,7 @@ public class ConserjeViewActivity extends AppCompatActivity {
         btnBusqueda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConserjeViewActivity.this, LoginActivity.class);
+                Intent intent = new Intent(ConserjeViewActivity.this, BusquedaActivity.class);
                 startActivity(intent);
             }
         });

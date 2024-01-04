@@ -22,14 +22,15 @@ import com.google.firebase.database.ValueEventListener;
 public class ResidenteViewActivity extends AppCompatActivity {
 
     private TextView txtMiNombre;
+    private Button btnVerDatos, btnReserva;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.residente_view_activity);
 
-        Button btnVerDatos = findViewById(R.id.btnDatos);
-        Button btnReserva = findViewById(R.id.btnReserva);
+        btnVerDatos = findViewById(R.id.btnDatos);
+        btnReserva = findViewById(R.id.btnReserva);
 
         // Inicializar las vistas
         txtMiNombre = findViewById(R.id.txtNombreUsuario);

@@ -32,4 +32,10 @@ public class User {
     public String getRole() {
         return role;
     }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + userName + "\nRol: " + role + "\nCorreo: " + email;
+    }
+
 }
