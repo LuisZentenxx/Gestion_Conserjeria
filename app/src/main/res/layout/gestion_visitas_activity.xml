@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:helperText="Con puntos y guión"
         app:layout_constraintTop_toBottomOf="@+id/nameLayout"
         android:layout_marginTop="16dp">
         <com.google.android.material.textfield.TextInputEditText
@@ -67,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="1"
-            android:hint="12.345.678-9"
+            android:hint="Rut"
             android:fontFamily="@font/regular"
             />
     </com.google.android.material.textfield.TextInputLayout>
