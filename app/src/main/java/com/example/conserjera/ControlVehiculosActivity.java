@@ -42,6 +42,12 @@ public class ControlVehiculosActivity extends AppCompatActivity {
         TextInputLayout txtColorLayout = findViewById(R.id.colorLayout);
         TextInputEditText txtColor = txtColorLayout.findViewById(R.id.txtColor);
 
+        TextInputLayout txtParkingLayout = findViewById(R.id.parkingLayout);
+        TextInputEditText txtParking = txtParkingLayout.findViewById(R.id.txtParking);
+
+        TextInputLayout txtDptoLayout = findViewById(R.id.DptoLayout);
+        TextInputEditText txtDpto = txtDptoLayout.findViewById(R.id.txtDpto);
+
         MaterialButton btnRegistro = findViewById(R.id.btnRegistroVehiculo);
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
@@ -51,12 +57,16 @@ public class ControlVehiculosActivity extends AppCompatActivity {
                 String patente = txtPatente.getText().toString().trim();
                 String marca = txtMarca.getText().toString().trim();
                 String color = txtColor.getText().toString().trim();
+                String parking = txtParking.getText().toString().trim();
+                String depto = txtDpto.getText().toString().trim();
 
                 // Crear un mapa con los datos del vehículo
                 Map<String, Object> vehiculoMap = new HashMap<>();
                 vehiculoMap.put("patente", patente);
                 vehiculoMap.put("marca", marca);
                 vehiculoMap.put("color", color);
+                vehiculoMap.put("parking", parking);
+                vehiculoMap.put("depto", depto);
 
                 // Verificar si la patente es sospechosa de manera aleatoria
                 if (esPatenteSospechosaAleatoria()) {
@@ -66,20 +76,30 @@ public class ControlVehiculosActivity extends AppCompatActivity {
                     // Redirigir a la actividad PatenteActivity y pasar la patente como dato extra
                     Intent intent = new Intent(ControlVehiculosActivity.this, PatenteActivity.class);
                     intent.putExtra("patente", patente);
-                    startActivity(intent);
+                    startActivityForResult(intent, 1); // El segundo parámetro es un código de solicitud único
 
                 } else {
-                    // Registrar los datos del vehículo en Firebase Realtime Database
-                    mDatabase.child(patente).setValue(vehiculoMap);
-
                     Toast.makeText(ControlVehiculosActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
 
                     // Redirigir a la actividad ConserjeViewActivity
                     Intent intent = new Intent(ControlVehiculosActivity.this, ConserjeViewActivity.class);
                     startActivity(intent);
                 }
+
+                // Registrar los datos del vehículo en Firebase Realtime Database
+                mDatabase.child(patente).setValue(vehiculoMap);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            // El código 1 corresponde a la actividad PatenteActivity
+            // Aquí puedes agregar lógica adicional si es necesario
+        }
     }
 
     // Verificar de manera aleatoria si la patente es sospechosa

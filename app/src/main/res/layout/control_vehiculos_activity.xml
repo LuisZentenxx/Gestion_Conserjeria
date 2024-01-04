@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/secondary_100"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -27,7 +26,7 @@
     <ImageView
         android:id="@+id/appLogo"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/parking"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +38,7 @@
         android:id="@+id/patenteLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         app:helperText="Formato 000000-0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patenteLayout"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="10dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtMarca"
             android:layout_width="match_parent"
@@ -82,7 +81,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/marcaLayout"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="10dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtColor"
             android:layout_width="match_parent"
@@ -93,19 +92,58 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Campo de Color -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/parkingLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorLayout"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtParking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:hint="N° Estacionamiento"
+            android:fontFamily="@font/regular"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Color -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/DptoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parkingLayout"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtDpto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:hint="N° Depto."
+            android:fontFamily="@font/regular"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegistroVehiculo"
-        android:layout_width="375dp"
+        android:layout_width="340dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/quaternary_500"
         android:fontFamily="@font/bold"
         android:text="Registrar"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

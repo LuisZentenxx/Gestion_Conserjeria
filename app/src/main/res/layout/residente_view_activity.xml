@@ -4,49 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/quaternary_500"
     android:padding="16dp"
     tools:context=".ResidenteViewActivity">
 
 
     <TextView
         android:id="@+id/txtNombreUsuario"
-        android:layout_width="364dp"
-        android:layout_height="290dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="361dp"
+        android:layout_height="251dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/bold"
         android:gravity="center"
+        android:textColor="@color/primary_50"
         android:textAlignment="center"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/welcome"
+        app:layout_constraintBottom_toTopOf="@+id/btnDatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDatos"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginTop="116dp"
-        android:backgroundTint="@color/quaternary_500"
+        android:layout_marginTop="216dp"
+        android:backgroundTint="@color/secondary_900"
         android:fontFamily="@font/bold"
+        android:textColor="@color/primary_50"
         android:text="Ver Mi Perfil"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnReserva"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:backgroundTint="@color/quaternary_500"
+        android:backgroundTint="@color/primary_50"
         android:fontFamily="@font/bold"
+        android:textColor="@color/secondary_900"
         android:text="Reserva de Espacios Comúnes"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDatos"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/closeSesion"
+        android:layout_width="136dp"
+        android:layout_height="33dp"
+        android:clickable="true"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:onClick="onTextViewClick"
+        android:text="Cerrar Sesión"
+        android:textAlignment="center"
+        android:textColor="@color/primary_50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReserva"
+        app:layout_constraintVertical_bias="0.878" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

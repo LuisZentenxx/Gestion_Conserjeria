@@ -23,6 +23,7 @@ public class ResidenteViewActivity extends AppCompatActivity {
 
     private TextView txtMiNombre;
     private Button btnVerDatos, btnReserva;
+    private TextView btnClose;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class ResidenteViewActivity extends AppCompatActivity {
 
         btnVerDatos = findViewById(R.id.btnDatos);
         btnReserva = findViewById(R.id.btnReserva);
+        btnClose = findViewById(R.id.closeSesion);
 
         // Inicializar las vistas
         txtMiNombre = findViewById(R.id.txtNombreUsuario);
@@ -78,6 +80,23 @@ public class ResidenteViewActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent = new Intent(ResidenteViewActivity.this, ReservaActivity.class);
                     startActivity(intent);
+                }
+            });
+
+            btnClose.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Mostrar Toast antes de cerrar sesión
+                    Toast.makeText(ResidenteViewActivity.this, "Cerrando sesión...", Toast.LENGTH_SHORT).show();
+
+                    // Cerrar sesión en Firebase
+                    FirebaseAuth.getInstance().signOut();
+
+                    // Redirigir a la actividad de inicio de sesión
+                    Intent intent = new Intent(ResidenteViewActivity.this, LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    finish();
                 }
             });
         }

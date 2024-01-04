@@ -39,6 +39,9 @@
         <activity android:name=".BusquedaResidenteActivity"/>
         <activity android:name=".BusquedaVehiculoActivity"/>
         <activity android:name=".BusquedaVisitaActivity"/>
+        <activity android:name=".BusquedaEncomiendaActivity"/>
+        <activity android:name=".ReservaPiscinaActivity"/>
+        <activity android:name=".ReservaSalaActivity"/>
 
 
 

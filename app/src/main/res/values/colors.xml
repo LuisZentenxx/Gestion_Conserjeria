@@ -64,4 +64,6 @@
     <color name="quinary_800">#471e00</color>
     <color name="quinary_900">#240f00</color>
     <color name="quinary_950">#140900</color>
+
+    <color name="yellow">#F9F915</color>
 </resources>

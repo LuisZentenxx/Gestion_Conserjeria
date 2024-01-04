@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginStart="4dp"
-        android:text="ControlHub"
+        android:text="C.A.S.I"
         android:textColor="@color/secondary_900"
         android:fontFamily="@font/bold"
         android:textSize="60sp"

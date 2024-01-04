@@ -13,6 +13,7 @@
         android:layout_height="60dp"
         android:fontFamily="@font/bold"
         android:text="Mis Datos"
+        android:textColor="@color/secondary_900"
         android:textAlignment="center"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -25,19 +26,23 @@
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="460dp"
+        android:layout_marginBottom="476dp"
         android:src="@drawable/user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtMiNombre"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="392dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/bold"
         android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_900"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/txtMiCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,26 +50,34 @@
 
     <TextView
         android:id="@+id/txtMiCorreo"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="240dp"
+        android:layout_width="384dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="168dp"
         android:fontFamily="@font/bold"
         android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_900"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtMiRol"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="148dp"
+        android:layout_width="379dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/bold"
         android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_900"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMiCorreo"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.145" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

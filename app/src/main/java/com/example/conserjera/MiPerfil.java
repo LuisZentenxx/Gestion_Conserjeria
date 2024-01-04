@@ -48,9 +48,9 @@ public class MiPerfil extends AppCompatActivity {
 
                         // Mostrar los datos del usuario en las vistas
                         if (user != null) {
-                            txtMiNombre.setText("Nombre: " + user.getUserName());
-                            txtMiCorreo.setText("Correo electrónico: " + user.getEmail());
-                            txtMiRol.setText("Rol: " + user.getRole());
+                            txtMiNombre.setText("Nombre \n" + user.getUserName());
+                            txtMiCorreo.setText("Correo electrónico \n" + user.getEmail());
+                            txtMiRol.setText("Rol \n" + user.getRole());
                         }
                     } else {
                         // El usuario no existe en la base de datos
